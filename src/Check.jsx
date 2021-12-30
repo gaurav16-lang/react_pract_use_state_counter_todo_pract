@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Taskitem from "./Taskitem";
 function Check() {
   const [task, setTask] = useState("");
   const [query, setQuery] = useState([]);
@@ -28,7 +28,7 @@ function Check() {
       />
       <button onClick={handleadd}>Add</button>
       {query.map((el) => {
-        return <div>{el.title}</div>;
+        return <Taskitem title={el.title} />;
       })}
     </>
   );
