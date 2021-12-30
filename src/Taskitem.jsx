@@ -1,8 +1,8 @@
 import React from "react";
 
-function Taskitem(props) {
-  console.log(props);
-  return <div>{props.title}</div>;
+function Taskitem({ title, color }) {
+  console.log(title);
+  return <div style={{ color }}>{title}</div>;
 }
 
 export default Taskitem;

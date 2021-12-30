@@ -27,8 +27,8 @@ function Check() {
         value={task}
       />
       <button onClick={handleadd}>Add</button>
-      {query.map((el) => {
-        return <Taskitem title={el.title} />;
+      {query.map((el, index) => {
+        return <Taskitem {...el} color={index % 2 == 0 ? "red" : "yellow"} />;
       })}
     </>
   );
